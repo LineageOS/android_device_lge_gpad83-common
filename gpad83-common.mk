@@ -43,6 +43,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/gpad83-common/configs/init.qcom.bt.sh:system/bin/init.qcom.bt.sh
 
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl
+
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=smd \
     ro.qualcomm.bt.hci_transport=smd
