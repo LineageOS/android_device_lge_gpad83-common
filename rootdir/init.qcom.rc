@@ -14,8 +14,9 @@
 # limitations under the License.
 #
 
-import init.awifi.power.rc
-import init.awifi.usb.rc
+import init.qcom.power.rc
+import init.qcom.usb.rc
+import init.target.rc
 
 on early-init
     chown system system /sys/kernel/debug/kgsl/proc
@@ -30,7 +31,7 @@ on init
     export LD_SHIM_LIBS "/system/lib/hw/camera.vendor.msm8960.so|libcamera_shim.so"
 
 on fs
-    mount_all ./fstab.awifi
+    mount_all ./fstab.qcom
     restorecon_recursive /persist
 
 on early-boot
@@ -179,7 +180,7 @@ on property:init.svc.hwaddrs=stopped
     chmod 644 /data/misc/wifi/macaddr
     chmod 644 /data/misc/bluetooth/bdaddr
 
-service hciattach /system/bin/init.awifi.bt.sh
+service hciattach /system/bin/init.qcom.bt.sh
     class late_start
     user bluetooth
     group qcom_oncrpc bluetooth net_bt_admin system
@@ -250,7 +251,7 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     user camera
     group camera system inet input
 
-service wcnss_init /system/bin/init.awifi.wifi.sh
+service wcnss_init /system/bin/init.qcom.wifi.sh
     class late_start
     user system
     group system wifi

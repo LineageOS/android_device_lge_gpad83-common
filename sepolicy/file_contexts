@@ -1,5 +1,5 @@
 # Bluetooth
-/system/bin/init\.awifi\.bt\.sh                      u:object_r:bluetooth_loader_exec:s0
+/system/bin/init\.qcom\.bt\.sh                       u:object_r:bluetooth_loader_exec:s0
 
 # Camera
 /dev/gemini0                                         u:object_r:camera_device:s0
@@ -32,4 +32,4 @@
 
 # Wifi
 /system/bin/conn_init                                u:object_r:conn_init_exec:s0
-/system/bin/init\.awifi\.wifi\.sh                    u:object_r:conn_init_exec:s0
+/system/bin/init\.qcom\.wifi\.sh                     u:object_r:conn_init_exec:s0

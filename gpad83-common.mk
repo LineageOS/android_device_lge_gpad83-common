@@ -16,7 +16,7 @@
 
 PRODUCT_CHARACTERISTICS := tablet
 
-DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS := device/lge/gpad83-common/overlay
 
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1200
@@ -34,14 +34,14 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     audio.r_submix.default \
     libaudio-resampler
-    
+
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/configs/mixer_paths.xml:system/etc/mixer_paths.xml
+    device/lge/gpad83-common/configs/audio_policy.conf:system/etc/audio_policy.conf \
+    device/lge/gpad83-common/configs/mixer_paths.xml:system/etc/mixer_paths.xml
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/init.awifi.bt.sh:system/bin/init.awifi.bt.sh
+    device/lge/gpad83-common/configs/init.qcom.bt.sh:system/bin/init.qcom.bt.sh
 
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=smd \
@@ -129,9 +129,9 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    device/lge/gpad83-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    device/lge/gpad83-common/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+    device/lge/gpad83-common/configs/media_profiles.xml:system/etc/media_profiles.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
@@ -151,13 +151,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.awifi
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.power=awifi
+
 # Rootdir
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/fstab.awifi:root/fstab.awifi \
-    $(LOCAL_PATH)/rootdir/init.awifi.rc:root/init.awifi.rc \
-    $(LOCAL_PATH)/rootdir/init.awifi.power.rc:root/init.awifi.power.rc \
-    $(LOCAL_PATH)/rootdir/init.awifi.usb.rc:root/init.awifi.usb.rc \
-    $(LOCAL_PATH)/rootdir/ueventd.awifi.rc:root/ueventd.awifi.rc
+    device/lge/gpad83-common/rootdir/fstab.qcom:root/fstab.qcom \
+    device/lge/gpad83-common/rootdir/init.qcom.rc:root/init.qcom.rc \
+    device/lge/gpad83-common/rootdir/init.qcom.power.rc:root/init.qcom.power.rc \
+    device/lge/gpad83-common/rootdir/init.qcom.usb.rc:root/init.qcom.usb.rc \
+    device/lge/gpad83-common/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -174,7 +177,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermald.conf:system/etc/thermald.conf
+    device/lge/gpad83-common/configs/thermald.conf:system/etc/thermald.conf
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -184,16 +187,16 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/init.awifi.wifi.sh:system/bin/init.awifi.wifi.sh
+    device/lge/gpad83-common/configs/init.qcom.wifi.sh:system/bin/init.qcom.wifi.sh
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
+    device/lge/gpad83-common/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    device/lge/gpad83-common/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
-    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin
+    device/lge/gpad83-common/wifi/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
+    device/lge/gpad83-common/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+    device/lge/gpad83-common/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin
 
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0

@@ -4,7 +4,7 @@ type conn_init_exec, exec_type, file_type;
 
 init_daemon_domain(conn_init)
 
-# Run init.awifi.wifi.sh
+# Run init.qcom.wifi.sh
 allow conn_init shell_exec:file rx_file_perms;
 allow conn_init conn_init_exec:file rx_file_perms;
 
@@ -14,6 +14,6 @@ allow conn_init wifi_data_file:file create_file_perms;
 
 allow conn_init wcnss_device:chr_file rw_file_perms;
 
-# init.awifi.wifi.sh runs toolbox
+# init.qcom.wifi.sh runs toolbox
 allow conn_init system_file:file execute_no_trans;
 allow conn_init toolbox_exec:file rx_file_perms;

@@ -1,6 +1,6 @@
 #!/system/bin/sh
 
-LOG_TAG="awifi-bluetooth"
+LOG_TAG="qcom-bluetooth"
 LOG_NAME="${0}:"
 
 loge ()
