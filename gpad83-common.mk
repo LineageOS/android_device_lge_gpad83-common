@@ -193,10 +193,5 @@ PRODUCT_COPY_FILES += \
     device/lge/gpad83-common/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     device/lge/gpad83-common/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
-PRODUCT_COPY_FILES += \
-    device/lge/gpad83-common/wifi/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
-    device/lge/gpad83-common/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    device/lge/gpad83-common/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin
-
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
