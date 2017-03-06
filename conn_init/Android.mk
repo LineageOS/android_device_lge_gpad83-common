@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-ifneq ($(filter v500,$(TARGET_DEVICE)),)
-
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -56,5 +54,3 @@ LOCAL_POST_INSTALL_CMD := \
     $(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_wlan_nv_init.bin
 
 include $(BUILD_EXECUTABLE)
-
-endif
