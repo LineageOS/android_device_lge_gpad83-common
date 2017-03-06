@@ -171,10 +171,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.sdcardfs=true
 
-# Telephony
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.radio.noril=1
-
 # Thermal
 PRODUCT_COPY_FILES += \
     device/lge/gpad83-common/configs/thermald.conf:system/etc/thermald.conf
