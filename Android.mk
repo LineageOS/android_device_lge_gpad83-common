@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+LOCAL_PATH := $(call my-dir)
+
 ifneq ($(filter altev awifi v500 vk810, $(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
