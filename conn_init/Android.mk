@@ -45,16 +45,6 @@ LOCAL_MODULE_PATH := $(TARGET_OUT)/bin
 LOCAL_MODULE := conn_init
 LOCAL_MODULE_OWNER := qcom
 
-# Make sure the symlinks get created as well.
-LOCAL_POST_INSTALL_CMD := \
-  mkdir -p $(TARGET_OUT_VENDOR)/firmware/wlan/prima/; \
-  ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
-    $(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini; \
-  ln -sf /data/misc/wifi/WCNSS_qcom_wlan_nv.bin \
-    $(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin; \
-  ln -sf /data/misc/wifi/WCNSS_qcom_wlan_nv.bin \
-    $(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_wlan_nv_init.bin
-
 include $(BUILD_EXECUTABLE)
 
 endif
