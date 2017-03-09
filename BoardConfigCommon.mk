@@ -69,6 +69,7 @@ TARGET_DISPLAY_USE_RETIRE_FENCE := true
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 # Hardware tunables
+BOARD_HARDWARE_CLASS := device/lge/gpad83-common/cmhw/
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/knock_on"
 
 # Kernel
