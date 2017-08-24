@@ -67,10 +67,14 @@ TARGET_USES_ION := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+SF_START_GRAPHICS_ALLOCATOR_SERVICE := true
 
 # Hardware tunables
 BOARD_HARDWARE_CLASS := device/lge/gpad83-common/cmhw/
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/knock_on"
+
+# HIDL
+DEVICE_MANIFEST_FILE := device/lge/gpad83-common/configs/manifest.xml
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/lge/v500

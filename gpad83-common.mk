@@ -29,6 +29,8 @@ $(call inherit-product, frameworks/native/build/tablet-7in-xhdpi-2048-dalvik-hea
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
     audio.primary.msm8960 \
     audio.a2dp.default \
     audio.usb.default \
@@ -84,11 +86,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl \
     gps.conf \
     gps.msm8960
 
 # Graphics
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.memtrack@1.0-impl \
     libgenlock \
     hwcomposer.msm8960 \
     gralloc.msm8960 \
@@ -125,6 +132,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
     lights.msm8960
 
 # Media
@@ -149,6 +157,7 @@ PRODUCT_PACKAGES += \
 
 # Power HAL
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl \
     power.awifi
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -174,6 +183,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Thermal
 PRODUCT_COPY_FILES += \
     device/lge/gpad83-common/configs/thermald.conf:system/etc/thermald.conf
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl
 
 # Wifi
 PRODUCT_PACKAGES += \
