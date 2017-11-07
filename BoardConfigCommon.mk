@@ -24,6 +24,9 @@ TARGET_CPU_VARIANT := krait
 # Audio
 BOARD_USES_ALSA_AUDIO:= true
 
+# Binder
+TARGET_USES_64_BIT_BINDER := true
+
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
