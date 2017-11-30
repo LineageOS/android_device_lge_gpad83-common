@@ -188,11 +188,6 @@
                cell broadcasting sms, and MMS. -->
     <bool name="config_sms_capable">false</bool>
 
-    <!--  Maximum number of supported users -->
-    <integer name="config_multiuserMaximumUsers">8</integer>
-    <!-- Whether UI for multi user should be shown -->
-    <bool name="config_enableMultiUserUI">true</bool>
-
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers" translatable="false">524288,1048576,2560000,524288,1048576,2560000</string>
