@@ -70,7 +70,7 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 SF_START_GRAPHICS_ALLOCATOR_SERVICE := true
 
 # Hardware tunables
-BOARD_HARDWARE_CLASS := device/lge/gpad83-common/cmhw/
+BOARD_HARDWARE_CLASS := device/lge/gpad83-common/lineagehw/
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/knock_on"
 
 # HIDL
