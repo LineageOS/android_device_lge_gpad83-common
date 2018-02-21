@@ -102,9 +102,8 @@ TARGET_RECOVERY_FSTAB := device/lge/gpad83-common/rootdir/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # SELinux policies
-include device/qcom/sepolicy/sepolicy.mk
-
-BOARD_SEPOLICY_DIRS += device/lge/gpad83-common/sepolicy
+#include device/qcom/sepolicy/sepolicy.mk
+#BOARD_SEPOLICY_DIRS += device/lge/gpad83-common/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
