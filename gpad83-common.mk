@@ -163,10 +163,7 @@ PRODUCT_PACKAGES += \
 # Power HAL
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
-    power.awifi
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.power=awifi
+    power.msm8960
 
 # Rootdir
 PRODUCT_COPY_FILES += \
