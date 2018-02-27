@@ -30,7 +30,9 @@ $(call inherit-product, frameworks/native/build/tablet-7in-xhdpi-2048-dalvik-hea
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
+    android.hardware.audio@2.0-service \
     android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio.effect@2.0-service \
     audio.primary.msm8960 \
     audio.a2dp.default \
     audio.usb.default \
@@ -59,6 +61,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl-legacy \
+    camera.device@1.0-impl-legacy \
     camera.msm8960 \
     libcamera_shim \
     Snap
@@ -93,9 +97,10 @@ PRODUCT_PACKAGES += \
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.graphics.composer@2.1-impl \
-    android.hardware.graphics.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-impl \
     libgenlock \
     hwcomposer.msm8960 \
     gralloc.msm8960 \
@@ -126,6 +131,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@1.0-impl \
+    android.hardware.health@1.0-service
 
 # Hwaddrs
 PRODUCT_PACKAGES += \
@@ -177,6 +187,9 @@ PRODUCT_COPY_FILES += \
     device/lge/gpad83-common/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc
 
 # Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sensors.wl_dis=true \
     ro.qualcomm.sensors.smd=true
